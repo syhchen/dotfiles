@@ -31,10 +31,6 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
 
-# Disable Notification Center and remove the menu bar icon
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
-ults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-
 ###############################################################################
 # Keyboard, Bluetooth accessories, trackpad, and input                        #
 ###############################################################################
@@ -42,7 +38,7 @@ ults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
-# Set a blazingly fast keyboard repeat rate
+# Set a fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 3
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
@@ -55,32 +51,8 @@ defaults write NSGlobalDomain AppleMetricUnits -bool false
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "America/Los_Angeles" > /dev/null
 
-# Point & Click: Disable "Look up & data detectors"
-defaults write com.apple.driver.AppleMultitouchTrackpad.trackpad TrackpadThreeFingerTapGesture -int 0
-
-# Point & Click: Enable "Secondary click" > "Click with two fingers"
-defaults write com.apple.driver.AppleMultitouchTrackpad.trackpad TrackpadRightClick -bool true
-
 # Point & Click: Disable "Tap to click"
-defaults write com.apple.driver.AppleMultitouchTrackpad.trackpad Clicking -bool false
-
-# Scroll & Zoom: Enable "Zoom in or out"
-defaults write com.apple.driver.AppleMultitouchTrackpad.trackpad TrackpadPinch -bool true
-
-# Scroll & Zoom: Enable "Smart zoom"
-defaults write com.apple.driver.AppleMultitouchTrackpad.trackpad TrackpadTwoFingerDoubleTapGesture -bool true
-
-# Scroll & Zoom: Enable "Rotate"
-defaults write com.apple.driver.AppleMultitouchTrackpad.trackpad TrackpadRotate -bool true
-
-# More Gestures: Disable "Swipe between pages"
-defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool true
-
-# More Gestures: Enable "Swipe between full-screen apps"
-defaults write com.apple.driver.AppleMultitouchTrackpad.trackpad TrackpadThreeFingerHorizSwipeGesture -int 2
-
-# More Gestures: Disable "Notification Center"
-defaults write com.apple.driver.AppleMultitouchTrackpad.trackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -int 0
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool false
 
 # More Gestures: Enable "Mission Control"
 defaults write com.apple.dock showMissionControlGestureEnabled -bool true
@@ -111,9 +83,6 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 # Finder                                                                      #
 ###############################################################################
 
-# Finder: disable window animations and Get Info animations
-defaults write com.apple.finder DisableAllAnimations -bool true
-
 # Set Desktop as the default location for new Finder windows
 # For other paths, use `PfLo` and `file:///full/path/here/`
 defaults write com.apple.finder NewWindowTarget -string "PfDe"
@@ -128,14 +97,8 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# Finder: show status bar
-defaults write com.apple.finder ShowStatusBar -bool true
-
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
-
-# Display full POSIX path as Finder window title
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
@@ -149,11 +112,6 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # Avoid creating .DS_Store files on network or USB volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
-
-# Enable snap-to-grid for icons on the desktop and in other icon views
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
 # Use column view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
@@ -304,13 +262,8 @@ for app in "Activity Monitor" \
 	"cfprefsd" \
 	"Dock" \
 	"Finder" \
-	"Google Chrome Canary" \
-	"Google Chrome" \
 	"Photos" \
 	"Safari" \
-	"SystemUIServer" \
-	"Terminal"; do
+	"SystemUIServer"; do
 	killall "${app}" &> /dev/null
 done
-
-echo "Done. Note that some of these changes require a logout/restart to take effect."
