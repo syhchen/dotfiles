@@ -7,12 +7,6 @@
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
-# Ask for the administrator password upfront
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
@@ -302,12 +296,13 @@ defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 ###############################################################################
-# Kill affected applications                                                  #
+# Cleanup                                                                     #
 ###############################################################################
 
 # Reset Launchpad, but keep the desktop wallpaper intact
 find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
 
+# Kill affected applications
 for app in "Activity Monitor" \
 	"cfprefsd" \
 	"Dock" \
@@ -320,4 +315,5 @@ for app in "Activity Monitor" \
 	"Terminal"; do
 	killall "${app}" &> /dev/null
 done
+
 echo "Done. Note that some of these changes require a logout/restart to take effect."

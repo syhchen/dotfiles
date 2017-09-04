@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Installing global npm packages..."
+echo "Installing n..."
+
 sudo npm install -g n
 n stable
-exit 0
