@@ -40,6 +40,10 @@ git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 ```
 
+**Window Manager**
+
+- I really like [Magnet](https://itunes.apple.com/us/app/magnet/id441258766?mt=12) on the Mac App Store
+
 **File Sync**
 
 - Set up `Dropbox.app`. What's stored on Dropbox?
@@ -47,5 +51,13 @@ git config --global user.email johndoe@example.com
 
 ## TODO
 
-- Disable annoying iTerm2 prompt when quitting `defaults write com.googlecode.iterm2 PromptOnQuit -bool false`
-- Add Adobe CC stuff?
+- Set up automatic configuration of preferred directory structure
+- Bash, path, and `.aliases` config
+- Git config
+- Paw/Transmit config
+- Atom/VS Code config
+- iTerm config, disable annoying iTerm2 prompt when quitting `defaults write com.googlecode.iterm2 PromptOnQuit -bool false`
+- Global npm module config
+- Docker config
+- Automate "Open in iTerm" script
+- Add creative tools (Adobe CC, Ableton, etc)
