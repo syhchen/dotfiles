@@ -5,14 +5,14 @@ function makeItSo() {
   echo -e "\033[1;32mChanging ownership of /usr/local to user ${USER}...\033[0m"
   sudo chown -R $USER:admin /usr/local
 
-  # install .macos
-  sh -a ./.macos
-
   # install Homebrew
   sh -a ./homebrew/install.sh
 
   # install Homebrew packages from Brewfile
   brew bundle
+
+  # install .macos
+  sh -a ./.macos
 
   # find all installers excluding Homebrew and run them iteratively
   find . -path ./homebrew -prune -o -name install.sh -print | while read installer ; do sh -a "${installer}" ; done
