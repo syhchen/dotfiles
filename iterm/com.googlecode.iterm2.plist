@@ -10,6 +10,8 @@
 	<integer>1</integer>
 	<key>Default Bookmark Guid</key>
 	<string>52F823CE-DAF8-484E-B2E9-47892FF9E222</string>
+	<key>DisableWindowSizeSnap</key>
+	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
@@ -47,10 +49,15 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1115 134 445 364 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>610 360 796 473 0 0 1680 1027 </string>
+	<string>610 386 796 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>838 14 836 1013 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
