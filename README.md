@@ -51,11 +51,12 @@ git config --global user.email johndoe@example.com
 
 ## TODO
 
+- Disable swipe between pages
 - Set up automatic configuration of preferred directory structure
 - Bash, path, and `.aliases` config
 - Git config
 - Paw/Transmit config
-- Atom/VS Code config
+- Atom/VS Code config (Editor Config, linters, themes)
 - iTerm config, disable annoying iTerm2 prompt when quitting `defaults write com.googlecode.iterm2 PromptOnQuit -bool false`
 - Global npm module config
 - Docker config
