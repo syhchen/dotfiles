@@ -8,3 +8,4 @@ n stable
 echo "\033[1;32mInstalling create-react-app...\033[0m"
 
 sudo npm install -g create-react-app
+sudo npm install -g surge

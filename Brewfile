@@ -2,9 +2,13 @@ cask_args appdir: '/Applications'
 
 tap 'caskroom/cask'
 
+brew 'heroku'
 brew 'mono'
 brew 'node'
 
+cask 'java'
+
+cask 'android-sdk'
 cask 'dropbox'
 cask 'figma'
 cask 'firefox'
