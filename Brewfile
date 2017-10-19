@@ -2,6 +2,7 @@ cask_args appdir: '/Applications'
 
 tap 'caskroom/cask'
 
+brew 'git-lfs'
 brew 'heroku'
 brew 'mono'
 brew 'node'
