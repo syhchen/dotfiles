@@ -20,11 +20,19 @@ function makeItSo() {
   # remove outdated versions from the cellar
   brew cleanup
 
+  # run Adobe CC installer
+  # if CC doesn't exist...
+  if [ -d "/Applications/Adobe\ Creative\ Cloud" ]; then
+    open -a /usr/local/Caskroom/adobe-creative-cloud/latest/Creative\ Cloud\ Installer.app
+  fi
+
   echo -e "\033[1;31mDone! Note that some of these changes require a logout/restart to take effect.\033[0m"
 }
 
 # ask for the administrator password upfront
 sudo -v
+
+xcode-select --install
 
 # keep alive by update existing sudo time stamp until install.sh has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
