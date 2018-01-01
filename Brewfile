@@ -4,8 +4,10 @@ tap 'caskroom/cask'
 
 brew 'git-lfs'
 brew 'heroku'
+brew 'mongodb'
 brew 'mono'
 brew 'node'
+brew 'postgres'
 
 cask 'java'
 
