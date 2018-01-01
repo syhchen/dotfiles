@@ -19,3 +19,6 @@ npm install -g create-react-native-app
 
 echo "\033[1;32mInstalling surge...\033[0m"
 npm install -g surge
+
+echo "\033[1;32mInstalling sequelize-cli...\033[0m"
+npm install -g sequelize-cli
