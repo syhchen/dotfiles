@@ -13,6 +13,7 @@ cask 'java'
 
 cask 'adobe-creative-cloud'
 cask 'android-sdk'
+cask 'dashlane'
 cask 'dropbox'
 cask 'figma'
 cask 'firefox'
