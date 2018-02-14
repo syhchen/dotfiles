@@ -17,8 +17,11 @@ echo "\033[1;32mInstalling create-react-native-app...\033[0m"
 
 npm install -g create-react-native-app
 
-echo "\033[1;32mInstalling surge...\033[0m"
-npm install -g surge
+echo "\033[1;32mInstalling gatsby-cli...\033[0m"
+npm install -g gatsby-cli
 
 echo "\033[1;32mInstalling sequelize-cli...\033[0m"
 npm install -g sequelize-cli
+
+echo "\033[1;32mInstalling surge...\033[0m"
+npm install -g surge
