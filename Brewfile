@@ -11,6 +11,7 @@ brew 'postgres'
 brew 'unrar'
 
 cask 'adobe-creative-cloud'
+cask 'android-platform-tools'
 cask 'android-sdk'
 cask 'dashlane'
 cask 'dropbox'
