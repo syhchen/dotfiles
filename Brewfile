@@ -9,7 +9,6 @@ brew 'node'
 brew 'postgres'
 brew 'unrar'
 
-cask 'adobe-creative-cloud'
 cask 'android-studio'
 cask 'dropbox'
 cask 'figma'

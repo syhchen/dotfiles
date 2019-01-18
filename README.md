@@ -56,8 +56,9 @@ Stop auto-syncing in iTunes when connecting an iPhone, iPad, or iPod:
 1. iTunes > Preferences > Devices.
 1. Check the box for "Prevent iPods, iPhones and iPads from syncing automatically".
 
-**Utilities**
+**Apps**
 
+- [Adobe Creative Cloud](https://creative.adobe.com/products/download/creative-cloud)
 - [ColorSnapper 2](https://itunes.apple.com/us/app/colorsnapper-2/id969418666) on the Mac App Store.
 - [Magnet](https://itunes.apple.com/us/app/magnet/id441258766) on the Mac App Store.
 
