@@ -1,5 +1,6 @@
 {
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Atom One Dark",
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.statusBar.feedback.visible": false,
-    "workbench.activityBar.visible": false
+    "workbench.statusBar.feedback.visible": false
 }

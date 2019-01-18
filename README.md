@@ -61,4 +61,3 @@ To stop auto-syncing in iTunes when connecting an iPhone, iPad, or iPod:
 - Disable swipe between pages in `.macos` config.
 - VS Code:
     - Copy files to symlinked directory from original config before removing it.
-    - Automatically install extensions?
