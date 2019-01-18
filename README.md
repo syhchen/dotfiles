@@ -28,25 +28,30 @@ Not every aspect of setting up a new machine is practical to automate. This sect
 
 **SSH**
 
-- Generate a new SSH keypair for this machine if one doesn't exist already. A great [GitHub Help article](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) to walk you through the process.
+Generate a new SSH keypair for this machine if one doesn't exist already.
+
+- A great [GitHub Help article](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) to walk you through the process.
 - Copy any other public or private SSH keys to `~/.ssh` and make sure they're set to `600`.
 
 **Git**
 
-- Configure your default git credentials:
+Configure your default git credentials:
 
 ```sh
 git config --global user.name "Stephen Chen"
 git config --global user.email stephen@example.com
 ```
 
-**VS Code**
+**Terminal**
 
-See [vscode/README.md](vscode/README.md);
+Set up theme profile for Terminal (Atom One Dark)[https://github.com/nathanbuchar/atom-one-dark-terminal]:
+
+1. Terminal > Preferences > Profiles.
+1. Click the gear icon and select "Import...".
 
 **iTunes**
 
-To stop auto-syncing in iTunes when connecting an iPhone, iPad, or iPod:
+Stop auto-syncing in iTunes when connecting an iPhone, iPad, or iPod:
 
 1. iTunes > Preferences > Devices.
 1. Check the box for "Prevent iPods, iPhones and iPads from syncing automatically".
@@ -58,5 +63,7 @@ To stop auto-syncing in iTunes when connecting an iPhone, iPad, or iPod:
 
 ## TODOs
 
+- Automatically configure `.bash_profile`.
+- Add guidlines for home directory config (~/Developer, ~/Designer, etc).
 - For `.macos` config, disable swipe between pages.
-- For VS Code, copy files to symlinked directory from original config before removing them.
+- For VS Code, copy config to symlinked directory from original directory before deleting it.
