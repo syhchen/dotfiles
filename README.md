@@ -36,8 +36,8 @@ Not every aspect of setting up a new machine is practical to automate. This sect
 - Configure your default git credentials:
 
 ```sh
-git config --global user.name "John Doe"
-git config --global user.email johndoe@example.com
+git config --global user.name "Stephen Chen"
+git config --global user.email stephen@example.com
 ```
 
 **VS Code**
@@ -58,6 +58,5 @@ To stop auto-syncing in iTunes when connecting an iPhone, iPad, or iPod:
 
 ## TODOs
 
-- Disable swipe between pages in `.macos` config.
-- VS Code:
-    - Copy files to symlinked directory from original config before removing it.
+- For `.macos` config, disable swipe between pages.
+- For VS Code, copy files to symlinked directory from original config before removing them.
