@@ -28,8 +28,8 @@ Not every aspect of setting up a new machine is practical to automate. This sect
 
 **SSH**
 
-- Generate a new SSH keypair for this machine if one doesn't exist already. A great [GitHub Help article](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) to walk you through the process
-- Copy any other public or private SSH keys to `~/.ssh` and make sure they're set to `600`
+- Generate a new SSH keypair for this machine if one doesn't exist already. A great [GitHub Help article](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) to walk you through the process.
+- Copy any other public or private SSH keys to `~/.ssh` and make sure they're set to `600`.
 
 **Git**
 
@@ -40,25 +40,21 @@ git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 ```
 
-**Window Manager**
+**iTunes**
 
-- I really like [Magnet](https://itunes.apple.com/us/app/magnet/id441258766?mt=12) on the Mac App Store
+To stop auto-syncing in iTunes when connecting an iPhone, iPad, or iPod:
 
-**File Sync**
+1. iTunes > Preferences > Devices.
+1. Check the box for "Prevent iPods, iPhones and iPads from syncing automatically".
 
-- Set up `Dropbox.app`. What's stored on Dropbox?
-- Set up `Backup and Sync from Google.app`. What's stored on Google Drive?
+**Utilities**
 
-## TODO
+- [ColorSnapper 2](https://itunes.apple.com/us/app/colorsnapper-2/id969418666) on the Mac App Store.
+- [Magnet](https://itunes.apple.com/us/app/magnet/id441258766) on the Mac App Store.
 
-- Disable swipe between pages
-- Set up automatic configuration of preferred directory structure
-- Bash, path, and `.aliases` config
-- Git config
-- Paw/Transmit config
-- Atom/VS Code config (Editor Config, linters, themes)
-- iTerm config, disable annoying iTerm2 prompt when quitting `defaults write com.googlecode.iterm2 PromptOnQuit -bool false`
-- Global npm module config
-- Docker config
-- Automate "Open in iTerm" script
-- Add creative tools (Adobe CC, Ableton, etc)
+## TODOs
+
+- Disable swipe between pages in `.macos` config.
+- VS Code:
+    - Symlink config to .dotfiles repo, see [example](https://pawelgrzybek.com/sync-vscode-settings-and-snippets-via-dotfiles-on-github/).
+    - Automatically install extensions?
