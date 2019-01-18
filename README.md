@@ -40,6 +40,10 @@ git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 ```
 
+**VS Code**
+
+See [vscode/README.md](vscode/README.md);
+
 **iTunes**
 
 To stop auto-syncing in iTunes when connecting an iPhone, iPad, or iPod:
@@ -56,5 +60,5 @@ To stop auto-syncing in iTunes when connecting an iPhone, iPad, or iPod:
 
 - Disable swipe between pages in `.macos` config.
 - VS Code:
-    - Symlink config to .dotfiles repo, see [example](https://pawelgrzybek.com/sync-vscode-settings-and-snippets-via-dotfiles-on-github/).
+    - Copy files to symlinked directory from original config before removing it.
     - Automatically install extensions?
