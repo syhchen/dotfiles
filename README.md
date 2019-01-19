@@ -52,6 +52,11 @@ Set Finder shortcut for tags (see: [Stack Exchange](https://apple.stackexchange.
 
 **Terminal**
 
+Enable "New Terminal Tab at Folder":
+
+1. Keyboard > Shortcuts > Services.
+1. Check the box for "New Terminal Tab at Folder".
+
 Set up theme profile for Terminal [Atom One Dark)](https://github.com/nathanbuchar/atom-one-dark-terminal):
 
 1. Terminal > Preferences > Profiles.
