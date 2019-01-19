@@ -44,7 +44,7 @@ git config --global user.email stephen@example.com
 
 **Finder**
 
-Set Finder shortcut for tags (see: [Stack Exchange](https://apple.stackexchange.com/a/340880)):
+Set Finder shortcut for tags (see: [Stack Exchange](https://apple.stackexchange.com/a/342314)):
 
 1. System Preferences > Keyboard > Shortcuts > App Shortcuts.
 1. Click the "+" button, set the Application dropdown to Finder.app, and enter "Tags…" (with the ellipsis character) in the Menu Title tag field.
