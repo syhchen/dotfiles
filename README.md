@@ -42,6 +42,14 @@ git config --global user.name "Stephen Chen"
 git config --global user.email stephen@example.com
 ```
 
+**Finder**
+
+Set Finder shortcut for tags (see: (Stack Exchange)[https://apple.stackexchange.com/questions/339126/is-there-a-way-to-set-a-finder-shortcut-for-tags-in-macos-10-14-mojave]):
+
+1. System Preferences > Keyboard > Shortcuts > App Shortcuts.
+1. Click the "+" button, set the Application dropdown to Finder.app, and enter "Tags…" (with the ellipsis character) in the Menu Title tag field.
+1. Pick a keyboard shortcut and click "Add".
+
 **Terminal**
 
 Set up theme profile for Terminal (Atom One Dark)[https://github.com/nathanbuchar/atom-one-dark-terminal]:
