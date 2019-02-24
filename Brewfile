@@ -7,6 +7,7 @@ brew 'git-lfs'
 brew 'jenv'
 brew 'node'
 brew 'postgres'
+brew 'rbenv'
 brew 'unrar'
 
 cask 'android-studio'
