@@ -14,6 +14,18 @@ Before running any installers, consider verifying that the following steps have 
 
 ## Installation
 
+Generate a new SSH keypair for this machine if one doesn't exist already.
+
+- A great [GitHub Help article](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) to walk you through the process.
+- Copy any other public or private SSH keys to `~/.ssh` and make sure they're set to `600`.
+
+Configure your default git credentials:
+
+```sh
+git config --global user.name "Jane Doe"
+git config --global user.email janedoe@example.com
+```
+
 Clone the repo to `~/.dotfiles` and run `bootstrap.sh` to install:
 
 ```sh
@@ -25,22 +37,6 @@ source ./bootstrap.sh
 ## Other Setup
 
 Not every aspect of setting up a new machine is practical to automate. This section contains written documentation that outlines some other steps that might be useful in the process. Some of these steps might be candidates for automation in the future.
-
-**SSH**
-
-Generate a new SSH keypair for this machine if one doesn't exist already.
-
-- A great [GitHub Help article](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) to walk you through the process.
-- Copy any other public or private SSH keys to `~/.ssh` and make sure they're set to `600`.
-
-**Git**
-
-Configure your default git credentials:
-
-```sh
-git config --global user.name "Stephen Chen"
-git config --global user.email stephen@example.com
-```
 
 **Finder**
 
@@ -77,5 +73,4 @@ Stop auto-syncing in iTunes when connecting an iPhone, iPad, or iPod:
 
 - Automatically configure `.bash_profile`.
 - Add guidlines for home directory config (~/Developer, ~/Designer, etc).
-- For `.macos` config, disable swipe between pages.
 - For VS Code, copy config to symlinked directory from original directory before deleting it.
