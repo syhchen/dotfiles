@@ -17,7 +17,7 @@ Before running any installers, consider verifying that the following steps have 
 Clone the repo to `~/.dotfiles` and run `bootstrap.sh` to install:
 
 ```sh
-git clone https://github.com/syhchen/dotfiles.git ~/.dotfiles
+git clone git@github.com:syhchen/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 source ./bootstrap.sh
 ```
