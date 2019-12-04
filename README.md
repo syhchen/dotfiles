@@ -53,10 +53,10 @@ Enable "New Terminal Tab at Folder":
 1. Keyboard > Shortcuts > Services.
 1. Check the box for "New Terminal Tab at Folder".
 
-Set up theme profile for Terminal [Atom One Dark)](https://github.com/nathanbuchar/atom-one-dark-terminal):
+Set up theme profile for Terminal ([Atom One Dark)](https://github.com/nathanbuchar/atom-one-dark-terminal):
 
-1. Terminal > Preferences > Profiles.
-1. Click the gear icon and select "Import...".
+1. Click to open `~/.dotfiles/terminal/atom-one-dark.terminal`.
+1. Select the new theme and click "Default" to set it to default.
 
 **iTunes**
 
@@ -65,12 +65,13 @@ Stop auto-syncing in iTunes when connecting an iPhone, iPad, or iPod:
 1. iTunes > Preferences > Devices.
 1. Check the box for "Prevent iPods, iPhones and iPads from syncing automatically".
 
-**Apps**
+**Other Apps**
 
 - [Adobe Creative Cloud](https://creative.adobe.com/products/download/creative-cloud)
 
 ## TODOs
 
+- Finish VSCode config.
 - Automatically configure `.bash_profile`.
 - Add guidlines for home directory config (~/Developer, ~/Designer, etc).
 - For VS Code, copy config to symlinked directory from original directory before deleting it.
