@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
 
 function makeItSo() {
-  # change ownership of /usr/local to current user
-  echo -e "\033[1;32mChanging ownership of /usr/local to user ${USER}...\033[0m"
-  sudo chown -R $USER:admin /usr/local
-
   # install Homebrew
   sh -a ./homebrew/install.sh
 
@@ -25,8 +21,6 @@ function makeItSo() {
 
 # ask for the administrator password upfront
 sudo -v
-
-xcode-select --install
 
 # keep alive by update existing sudo time stamp until install.sh has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &

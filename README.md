@@ -17,7 +17,7 @@ Before running any installers, consider verifying that the following steps have 
 Clone the repo to `~/.dotfiles` and run `bootstrap.sh` to install:
 
 ```sh
-git clone git@github.com:SCDevy/dotfiles.git ~/.dotfiles
+git clone https://github.com/syhchen/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 source ./bootstrap.sh
 ```
@@ -72,8 +72,6 @@ Stop auto-syncing in iTunes when connecting an iPhone, iPad, or iPod:
 **Apps**
 
 - [Adobe Creative Cloud](https://creative.adobe.com/products/download/creative-cloud)
-- [ColorSnapper 2](https://itunes.apple.com/us/app/colorsnapper-2/id969418666) on the Mac App Store.
-- [Magnet](https://itunes.apple.com/us/app/magnet/id441258766) on the Mac App Store.
 
 ## TODOs
 
