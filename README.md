@@ -49,12 +49,9 @@ chmod +x bootstrap.sh
 
 Not every aspect of setting up a new machine is practical to automate. Some of the manual setup outlined below might be candidates for automation in the future.
 
-### iTunes
+### Modifier Keys
 
-Stop auto-syncing in iTunes when connecting an iPhone, iPad, or iPod:
-
-1. iTunes > Preferences > Devices.
-1. Check the box for "Prevent iPods, iPhones and iPads from syncing automatically".
+https://support.apple.com/en-by/guide/mac-help/mchlp1011/mac
 
 ## Resources
 
