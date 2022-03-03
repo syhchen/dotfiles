@@ -1,10 +1,10 @@
 #!/bin/bash
 
-function useSudo() {
+function initSudo() {
   # ask for the administrator password upfront
   sudo -v
 
-  # keep alive by update existing sudo time stamp until install.sh has finished
+  # keep alive by update existing sudo time stamp until bootstrap.sh has finished
   while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 }
 
@@ -13,8 +13,8 @@ function makeItSo() {
   echo -e "\033[1;32mExecuting .mkdir...\033[0m"
   source ./.mkdir
 
-  # use sudo
-  useSudo
+  # initialize sudo
+  initSudo
 
   # install Homebrew
   source ./homebrew/install.sh

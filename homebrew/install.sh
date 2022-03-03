@@ -1,8 +1,11 @@
 #!/bin/bash
 
-echo -e "\033[1;32mUpdating/Upgrading Homebrew...\033[0m"
+echo -e "\033[1;32mUpdating Homebrew...\033[0m"
 
 brew update
+
+echo -e "\033[1;32mUpgrading Homebrew...\033[0m"
+
 brew upgrade
 
 echo -e "\033[1;32mInstalling Homebrew Bundle...\033[0m"

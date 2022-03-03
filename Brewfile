@@ -3,7 +3,7 @@ cask_args appdir: '/Applications'
 tap 'homebrew/cask'
 
 brew 'jenv'
-brew 'node'
+brew 'n'
 brew 'rbenv'
 
 cask '1password'
