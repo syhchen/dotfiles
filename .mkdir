@@ -3,3 +3,5 @@
 mkdir -p ~/Designer/Exports
 mkdir -p ~/Developer
 mkdir -p ~/Documents/Screenshots
+mkdir -p ~/Movies
+mkdir -p ~/Pictures
