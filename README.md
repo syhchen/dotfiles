@@ -1,77 +1,66 @@
 # dotfiles
 
-Stephen does dotfiles. Inspired by several fantastic dotfiles projects on GitHub, including work by [@mathiasbynens](https://github.com/mathiasbynens/dotfiles), [@holman](https://github.com/holman/dotfiles), [@driesvints](https://github.com/driesvints/dotfiles), and [@anglinb](https://github.com/anglinb/dotfiles).
-
-The goal of this project is to make gettings started with a new machine easy through automation and configuration. Every installer contained here is designed to be as **idempotent** as possible, to make it easy to rerun processes and update my preferences between machines as they evolve.
+The goal of this project is to make getting started with a new macOS machine easy through automation and configuration. Every script contained here is designed to be as **idempotent** as possible – whenever your preferences evolve, you can simply update this project and rerun the installer.
 
 ## Prerequisites
 
-Before running any installers, consider verifying that the following steps have been completed:
+Before running the installer, consider verifying that the following steps have been completed:
 
+- Sign in with your Apple ID on your Mac
 - Update macOS to the latest version on the App Store
 - Install Xcode from the App Store, open it, and accept the license agreement
 - Install macOS Command Line Tools by running `xcode-select --install`
 
-## Installation
+## Download (SSH)
 
-Generate a new SSH keypair for this machine if one doesn't exist already.
+Since I generally have this dotfiles project synced to my iCloud Drive, it is usually instantly available on my new machine after I sign in with my Apple ID. You can also clone this repo from GitHub via SSH.
 
-- A great [GitHub Help article](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) to walk you through the process.
-- Copy any other public or private SSH keys to `~/.ssh` and make sure they're set to `600`.
+First, you'll need to generate a new SSH keypair for your machine if one doesn't exist already:
 
-Configure your default git credentials:
+- This [GitHub Help article](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) can walk you through the process
+- Copy any other SSH keys to `~/.ssh` and make sure they're set to `600`
 
-```sh
-git config --global user.name "Jane Doe"
-git config --global user.email janedoe@example.com
+Then, configure your default git credentials:
+
+```bash
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
 ```
 
-Clone the repo to `~/.dotfiles` and run `bootstrap.sh` to install:
+Finally, clone the repo to your machine. I'd suggest using your home directory (`~`) or iCloud Drive:
 
-```sh
-git clone git@github.com:syhchen/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
+```bash
+git clone git@github.com:syhchen/dotfiles.git
+```
+
+## Installation
+
+Run `bootstrap.sh` to install:
+
+```bash
 source ./bootstrap.sh
 ```
 
-## Other Setup
+## Manual Setup
 
-Not every aspect of setting up a new machine is practical to automate. This section contains written documentation that outlines some other steps that might be useful in the process. Some of these steps might be candidates for automation in the future.
+Not every aspect of setting up a new machine is practical to automate. Some of the manual setup outlined below might be candidates for automation in the future.
 
-**Finder**
-
-Set Finder shortcut for tags (see: [Stack Exchange](https://apple.stackexchange.com/a/342314)):
-
-1. System Preferences > Keyboard > Shortcuts > App Shortcuts.
-1. Click the "+" button, set the Application dropdown to Finder.app, and enter "Tags…" (with the ellipsis character) in the Menu Title tag field.
-1. Pick a keyboard shortcut and click "Add".
-
-**Terminal**
+### Terminal
 
 Enable "New Terminal Tab at Folder":
 
 1. Keyboard > Shortcuts > Services.
 1. Check the box for "New Terminal Tab at Folder".
 
-Set up theme profile for Terminal ([Atom One Dark)](https://github.com/nathanbuchar/atom-one-dark-terminal):
-
-1. Click to open `~/.dotfiles/terminal/atom-one-dark.terminal`.
-1. Select the new theme and click "Default" to set it to default.
-
-**iTunes**
+### iTunes
 
 Stop auto-syncing in iTunes when connecting an iPhone, iPad, or iPod:
 
 1. iTunes > Preferences > Devices.
 1. Check the box for "Prevent iPods, iPhones and iPads from syncing automatically".
 
-**Other Apps**
-
-- [Adobe Creative Cloud](https://creative.adobe.com/products/download/creative-cloud)
-
 ## TODOs
 
 - Finish VSCode config.
-- Automatically configure `.bash_profile`.
 - Add guidlines for home directory config (~/Developer, ~/Designer, etc).
 - For VS Code, copy config to symlinked directory from original directory before deleting it.

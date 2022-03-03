@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Based on:
+# Inspired by:
 # ~/.macos — https://mths.be/macos
 
 # Close any open System Preferences panes, to prevent them from overriding
@@ -14,65 +14,35 @@ osascript -e 'tell application "System Preferences" to quit'
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
-# Expand save panel by default
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
-
-# Expand print panel by default
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
-
-# Save to disk (not to iCloud) by default
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
-
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 ###############################################################################
-# Keyboard, Bluetooth accessories, trackpad, and input                        #
+# Keyboard                                                                    #
 ###############################################################################
 
 # Set language and text formats
 defaults write NSGlobalDomain AppleLanguages -array "en" "zh-Hant"
 
 ###############################################################################
-# Screen                                                                      #
-###############################################################################
-
-# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
-defaults write com.apple.screencapture type -string "png"
-
-###############################################################################
 # Finder                                                                      #
 ###############################################################################
-
-# Don't show icons for hard drives, servers, and removable media on the desktop
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
-defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# Finder: show path bar
-defaults write com.apple.finder ShowPathbar -bool true
+###############################################################################
+# Dock                                                                        #
+###############################################################################
 
-# Keep folders on top when sorting by name
-defaults write com.apple.finder _FXSortFoldersFirst -bool true
+# Set the icon size of Dock items to 36 pixels
+defaults write com.apple.dock tilesize -int 36
 
-# Disable the warning when changing a file extension
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+# Show indicator lights for open applications in the Dock
+defaults write com.apple.dock show-process-indicators -bool true
 
-# Use column view in all Finder windows by default
-# Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
-defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
-
-# Show the ~/Library folder
-chflags nohidden ~/Library
-
-# Show the /Volumes folder
-sudo chflags nohidden /Volumes
+# Automatically hide and show the Dock
+defaults write com.apple.dock autohide -bool true
 
 ###############################################################################
 # Time Machine                                                                #
@@ -82,7 +52,7 @@ sudo chflags nohidden /Volumes
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 ###############################################################################
-# TextEdit and Disk Utility                                                   #
+# Disk Utility                                                                #
 ###############################################################################
 
 # Enable the debug menu in Disk Utility
@@ -90,15 +60,18 @@ defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
 defaults write com.apple.DiskUtility advanced-image-options -bool true
 
 ###############################################################################
-# Mac App Store                                                               #
-###############################################################################
-
-# Turn on app auto-update
-defaults write com.apple.commerce AutoUpdate -bool true
-
-###############################################################################
 # Photos                                                                      #
 ###############################################################################
 
 # Prevent Photos from opening automatically when devices are plugged in
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+for app in "Activity Monitor" \
+	"cfprefsd" \
+	"Dock" \
+	"Finder" \
+	"Photos" \
+	"SystemUIServer" \
+	"Terminal"; do
+	killall "${app}" &> /dev/null
+done

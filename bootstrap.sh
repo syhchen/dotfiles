@@ -28,7 +28,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 if [ "$1" == "--force" -o "$1" == "-f" ] ; then
   makeItSo
 else
-  read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
+  read -p "Are you sure you want to run bootstrap.sh? (y/n) " -n 1
   echo ""
   if [[ $REPLY =~ ^[Yy]$ ]] ; then
     makeItSo
