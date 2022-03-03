@@ -25,17 +25,31 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write NSGlobalDomain AppleLanguages -array "en" "zh-Hant"
 
 ###############################################################################
+# Screen                                                                      #
+###############################################################################
+
+# Save screenshots to ~/Documents/Screenshots
+defaults write com.apple.screencapture location -string "${HOME}/Documents/Screenshots"
+
+###############################################################################
 # Finder                                                                      #
 ###############################################################################
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
+# Disable the warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Use list view in all Finder windows by default
+# Four-letter codes for the other view modes: `icnv`, `clmv`, `glyv`
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+
 ###############################################################################
 # Dock                                                                        #
 ###############################################################################
 
-# Set the icon size of Dock items to 36 pixels
+# Set the icon size of Dock items
 defaults write com.apple.dock tilesize -int 36
 
 # Show indicator lights for open applications in the Dock

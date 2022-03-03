@@ -55,3 +55,7 @@ Stop auto-syncing in iTunes when connecting an iPhone, iPad, or iPod:
 
 1. iTunes > Preferences > Devices.
 1. Check the box for "Prevent iPods, iPhones and iPads from syncing automatically".
+
+## Resources
+
+- https://dotfiles.github.io

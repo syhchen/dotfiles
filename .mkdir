@@ -1,4 +1,5 @@
 #!/bin/bash
 
+mkdir -p ~/Designer/Exports
 mkdir -p ~/Developer
-mkdir -p ~/Designer
+mkdir -p ~/Documents/Screenshots
