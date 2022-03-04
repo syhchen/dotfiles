@@ -1,7 +1,6 @@
 #!/bin/bash
 
-mkdir -p ~/Designer/Exports
-mkdir -p ~/Developer
+mkdir -p ~/Developer/Exports
 mkdir -p ~/Documents/Screenshots
 mkdir -p ~/Movies
 mkdir -p ~/Pictures

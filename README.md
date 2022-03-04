@@ -62,3 +62,7 @@ Not every aspect of setting up a new machine is practical to automate, though so
 ## Resources
 
 - https://dotfiles.github.io
+
+## Screenshot
+
+![screenshot](screenshot.png)
