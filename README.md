@@ -47,11 +47,17 @@ chmod +x bootstrap.sh
 
 ## Manual Setup
 
-Not every aspect of setting up a new machine is practical to automate. Some of the manual setup outlined below might be candidates for automation in the future.
+Not every aspect of setting up a new machine is practical to automate, though some of the manual setup outlined below might be candidates for automation in the future.
 
-### Modifier Keys
+- Configure applications:
+    - **Rectangle**
+    - **Google Drive**
+    - **1Password**
 
-https://support.apple.com/en-by/guide/mac-help/mchlp1011/mac
+- [Change the behavior of the modifier keys on Mac](https://support.apple.com/en-by/guide/mac-help/mchlp1011/mac)
+- [Write in another language on your Mac](https://support.apple.com/lv-lv/guide/mac-help/mchlp1406/mac)
+- [Customize the Finder toolbars on Mac](https://support.apple.com/en-by/guide/mac-help/mchlp3011/mac)
+- [Add and customize widgets in Notification Center on Mac](https://support.apple.com/lv-lv/guide/mac-help/mchl52be5da5/mac)
 
 ## Resources
 
