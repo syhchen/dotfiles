@@ -21,7 +21,7 @@ You'll need to generate a new SSH keypair for your machine if one doesn't exist 
 
 Then, configure your default git credentials:
 
-```bash
+```zsh
 git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 ```
@@ -32,7 +32,7 @@ Since I generally have this dotfiles project synced to my iCloud Drive, it is us
 
 You can also clone this repo from GitHub via SSH. If you don't want to keep this project synced with iCloud Drive, I'd suggest using your home directory (`~`):
 
-```bash
+```zsh
 git clone git@github.com:syhchen/dotfiles.git
 ```
 
@@ -49,20 +49,32 @@ chmod +x bootstrap.sh
 
 Not every aspect of setting up a new machine is practical to automate, though some of the manual setup outlined below might be candidates for automation in the future.
 
-- Configure applications:
-    - **Rectangle**
-    - **Google Drive**
-    - **1Password**
+- Install applications:
+  
+  - **Arc**
 
+- Configure applications:
+
+  - **1Password**
+  - **Google Drive**
+  - **iMessage** (iCloud sync, text message forwarding)
+  - **Raycast**
+  - **Rectangle**
+
+- [Change your computer’s name or local hostname on Mac](https://support.apple.com/lv-lv/guide/mac-help/mchlp2322/mac)
 - [Change the behavior of the modifier keys on Mac](https://support.apple.com/en-by/guide/mac-help/mchlp1011/mac)
-- [Write in another language on your Mac](https://support.apple.com/lv-lv/guide/mac-help/mchlp1406/mac)
-- [Customize the Finder toolbars on Mac](https://support.apple.com/en-by/guide/mac-help/mchlp3011/mac)
+- [Add folders to the sidebar (Customize the Finder toolbars on Mac)](https://support.apple.com/en-by/guide/mac-help/mchlp3011/mac)
 - [Add and customize widgets in Notification Center on Mac](https://support.apple.com/lv-lv/guide/mac-help/mchl52be5da5/mac)
+- [Add contacts from iCloud, Google, and more to Contacts on Mac](https://support.apple.com/guide/contacts/add-contacts-from-icloud-google-and-more-adrb7e5aaa2a/mac)
+- [Remove Siri in menu bar](https://support.apple.com/en-by/guide/mac-help/mchl3fd7fc15/mac)
+- [Remove Spotlight in menu bar (What’s in the menu bar on Mac?)](https://support.apple.com/en-by/guide/mac-help/mchlp1446/mac)
+- [Write in another language on your Mac](https://support.apple.com/lv-lv/guide/mac-help/mchlp1406/mac)
 
 ## Resources
 
 - https://dotfiles.github.io
+- [How to write idempotent Bash scripts](https://arslan.io/2019/07/03/how-to-write-idempotent-bash-scripts/)
 
-## Screenshot
+## Screenshots
 
 ![screenshot](screenshot.png)

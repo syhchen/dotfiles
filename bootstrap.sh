@@ -9,9 +9,9 @@ function initSudo() {
 }
 
 function makeItSo() {
-  # execute .mkdir
-  echo -e "\033[1;32mExecuting .mkdir...\033[0m"
-  source ./.mkdir
+  # execute .fs (filesystem)
+  echo -e "\033[1;32mExecuting .fs...\033[0m"
+  source ./.fs
 
   # initialize sudo
   initSudo
@@ -28,7 +28,7 @@ function makeItSo() {
   # find all installers (excluding Homebrew) and run them iteratively
   find . -path ./homebrew -prune -o -name install.sh -print | while read installer ; do source "${installer}" ; done
 
-  # execulte .macos
+  # execute .macos
   echo -e "\033[1;32mExecuting .macos...\033[0m"
   source ./.macos
 

@@ -3,34 +3,17 @@
 # Inspired by:
 # ~/.macos — https://mths.be/macos
 
-# Close any open System Preferences panes, to prevent them from overriding
-# settings we’re about to change
+# Close open System Preferences panes to prevent them from overriding settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
-
-###############################################################################
-# General UI/UX                                                               #
-###############################################################################
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-###############################################################################
-# Keyboard                                                                    #
-###############################################################################
-
 # Set language and text formats
 defaults write NSGlobalDomain AppleLanguages -array "en" "zh-Hant"
 
-###############################################################################
-# Screen                                                                      #
-###############################################################################
-
 # Save screenshots to ~/Documents/Screenshots
 defaults write com.apple.screencapture location -string "${HOME}/Documents/Screenshots"
-
-###############################################################################
-# Finder                                                                      #
-###############################################################################
 
 # Set the default location for new Finder windows
 # For Desktop, use `PfDe` and `file://${HOME}/Desktop/`
@@ -44,18 +27,11 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # Set the default view for all Finder windows
-# Four-letter codes for the other view modes: `icnv`, `Nlsv`, `clmv`, `glyv`
-defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
-
-###############################################################################
-# Dock                                                                        #
-###############################################################################
+# Four-letter codes for view modes: `icnv` (icon), `Nlsv` (list), `clmv` (column)
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 # Set the icon size of Dock items
 defaults write com.apple.dock tilesize -int 40
-
-# Show indicator lights for open applications in the Dock
-defaults write com.apple.dock show-process-indicators -bool true
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
@@ -63,24 +39,8 @@ defaults write com.apple.dock autohide -bool true
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
 
-###############################################################################
-# Time Machine                                                                #
-###############################################################################
-
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
-
-###############################################################################
-# Disk Utility                                                                #
-###############################################################################
-
-# Enable the debug menu in Disk Utility
-defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
-defaults write com.apple.DiskUtility advanced-image-options -bool true
-
-###############################################################################
-# Photos                                                                      #
-###############################################################################
 
 # Prevent Photos from opening automatically when devices are plugged in
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
