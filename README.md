@@ -49,18 +49,16 @@ chmod +x bootstrap.sh
 
 Not every aspect of setting up a new machine is practical to automate, though some of the manual setup outlined below might be candidates for automation in the future.
 
-- Install applications:
-  
-  - **Arc**
-
-- Configure applications:
-
+- Configure core utilities:
   - **1Password**
+  - **Cron**
   - **Google Drive**
   - **iMessage** (iCloud sync, text message forwarding)
   - **Raycast**
   - **Rectangle**
-
+- Install and configure core utilities not available via Homebrew:
+  - **Arc**
+  - **Flow**
 - [Change your computer’s name or local hostname on Mac](https://support.apple.com/lv-lv/guide/mac-help/mchlp2322/mac)
 - [Change the behavior of the modifier keys on Mac](https://support.apple.com/en-by/guide/mac-help/mchlp1011/mac)
 - [Add folders to the sidebar (Customize the Finder toolbars on Mac)](https://support.apple.com/en-by/guide/mac-help/mchlp3011/mac)
