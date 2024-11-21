@@ -4,6 +4,7 @@ tap 'homebrew/cask'
 
 brew 'jenv'
 brew 'nodenv'
+brew 'pyenv'
 brew 'rbenv'
 
 cask '1password'
