@@ -1,7 +1,5 @@
 cask_args appdir: '/Applications'
 
-tap 'homebrew/cask'
-
 brew 'jenv'
 brew 'nodenv'
 brew 'pyenv'
@@ -9,10 +7,6 @@ brew 'rbenv'
 
 cask '1password'
 cask 'android-studio'
-cask 'cron'
-cask 'figma'
-cask 'firefox'
-cask 'google-chrome'
 cask 'google-drive'
 cask 'rar'
 cask 'raycast'

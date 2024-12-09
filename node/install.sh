@@ -2,7 +2,7 @@
 
 FILE=~/.zshrc
 INIT="eval \"\$(nodenv init -)\""
-NODE=16.16.0
+NODE=22.12.0
 
 echo -e "\033[1;32mAdding nodenv initialization to $FILE...\033[0m"
 
